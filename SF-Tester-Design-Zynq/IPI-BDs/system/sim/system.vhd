@@ -1,8 +1,8 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Wed Jul 29 22:57:50 2020
---Host        : J1STUDY running 64-bit major release  (build 9200)
+--Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
+--Date        : Thu Jul 30 13:34:12 2020
+--Host        : l2study running 64-bit Ubuntu 18.04.4 LTS
 --Command     : generate_target system.bd
 --Design      : system
 --Purpose     : IP block netlist
@@ -1888,7 +1888,7 @@ entity system is
     sws_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of system : entity is "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=17,numReposBlks=10,numNonXlnxBlks=4,numHierBlks=7,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=14,da_clkrst_cnt=7,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of system : entity is "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=17,numReposBlks=10,numNonXlnxBlks=4,numHierBlks=7,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=18,da_clkrst_cnt=9,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of system : entity is "system.hwdef";
 end system;
@@ -2009,107 +2009,7 @@ architecture STRUCTURE of system is
     gpio2_io_i : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component system_axi_gpio_0_2;
-  component system_PmodCLS_0_3 is
-  port (
-    AXI_LITE_SPI_araddr : in STD_LOGIC_VECTOR ( 6 downto 0 );
-    AXI_LITE_SPI_arready : out STD_LOGIC;
-    AXI_LITE_SPI_arvalid : in STD_LOGIC;
-    AXI_LITE_SPI_awaddr : in STD_LOGIC_VECTOR ( 6 downto 0 );
-    AXI_LITE_SPI_awready : out STD_LOGIC;
-    AXI_LITE_SPI_awvalid : in STD_LOGIC;
-    AXI_LITE_SPI_bready : in STD_LOGIC;
-    AXI_LITE_SPI_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    AXI_LITE_SPI_bvalid : out STD_LOGIC;
-    AXI_LITE_SPI_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    AXI_LITE_SPI_rready : in STD_LOGIC;
-    AXI_LITE_SPI_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    AXI_LITE_SPI_rvalid : out STD_LOGIC;
-    AXI_LITE_SPI_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    AXI_LITE_SPI_wready : out STD_LOGIC;
-    AXI_LITE_SPI_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    AXI_LITE_SPI_wvalid : in STD_LOGIC;
-    Pmod_out_pin10_i : in STD_LOGIC;
-    Pmod_out_pin10_o : out STD_LOGIC;
-    Pmod_out_pin10_t : out STD_LOGIC;
-    Pmod_out_pin1_i : in STD_LOGIC;
-    Pmod_out_pin1_o : out STD_LOGIC;
-    Pmod_out_pin1_t : out STD_LOGIC;
-    Pmod_out_pin2_i : in STD_LOGIC;
-    Pmod_out_pin2_o : out STD_LOGIC;
-    Pmod_out_pin2_t : out STD_LOGIC;
-    Pmod_out_pin3_i : in STD_LOGIC;
-    Pmod_out_pin3_o : out STD_LOGIC;
-    Pmod_out_pin3_t : out STD_LOGIC;
-    Pmod_out_pin4_i : in STD_LOGIC;
-    Pmod_out_pin4_o : out STD_LOGIC;
-    Pmod_out_pin4_t : out STD_LOGIC;
-    Pmod_out_pin7_i : in STD_LOGIC;
-    Pmod_out_pin7_o : out STD_LOGIC;
-    Pmod_out_pin7_t : out STD_LOGIC;
-    Pmod_out_pin8_i : in STD_LOGIC;
-    Pmod_out_pin8_o : out STD_LOGIC;
-    Pmod_out_pin8_t : out STD_LOGIC;
-    Pmod_out_pin9_i : in STD_LOGIC;
-    Pmod_out_pin9_o : out STD_LOGIC;
-    Pmod_out_pin9_t : out STD_LOGIC;
-    ext_spi_clk : in STD_LOGIC;
-    s_axi_aclk : in STD_LOGIC;
-    s_axi_aresetn : in STD_LOGIC
-  );
-  end component system_PmodCLS_0_3;
-  component system_PWM_0_1 is
-  port (
-    pwm : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    pwm_axi_awaddr : in STD_LOGIC_VECTOR ( 6 downto 0 );
-    pwm_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    pwm_axi_awvalid : in STD_LOGIC;
-    pwm_axi_awready : out STD_LOGIC;
-    pwm_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    pwm_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    pwm_axi_wvalid : in STD_LOGIC;
-    pwm_axi_wready : out STD_LOGIC;
-    pwm_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    pwm_axi_bvalid : out STD_LOGIC;
-    pwm_axi_bready : in STD_LOGIC;
-    pwm_axi_araddr : in STD_LOGIC_VECTOR ( 6 downto 0 );
-    pwm_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    pwm_axi_arvalid : in STD_LOGIC;
-    pwm_axi_arready : out STD_LOGIC;
-    pwm_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    pwm_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    pwm_axi_rvalid : out STD_LOGIC;
-    pwm_axi_rready : in STD_LOGIC;
-    pwm_axi_aclk : in STD_LOGIC;
-    pwm_axi_aresetn : in STD_LOGIC
-  );
-  end component system_PWM_0_1;
-  component system_PWM_1_1 is
-  port (
-    pwm : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    pwm_axi_awaddr : in STD_LOGIC_VECTOR ( 6 downto 0 );
-    pwm_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    pwm_axi_awvalid : in STD_LOGIC;
-    pwm_axi_awready : out STD_LOGIC;
-    pwm_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    pwm_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    pwm_axi_wvalid : in STD_LOGIC;
-    pwm_axi_wready : out STD_LOGIC;
-    pwm_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    pwm_axi_bvalid : out STD_LOGIC;
-    pwm_axi_bready : in STD_LOGIC;
-    pwm_axi_araddr : in STD_LOGIC_VECTOR ( 6 downto 0 );
-    pwm_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    pwm_axi_arvalid : in STD_LOGIC;
-    pwm_axi_arready : out STD_LOGIC;
-    pwm_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    pwm_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    pwm_axi_rvalid : out STD_LOGIC;
-    pwm_axi_rready : in STD_LOGIC;
-    pwm_axi_aclk : in STD_LOGIC;
-    pwm_axi_aresetn : in STD_LOGIC
-  );
-  end component system_PWM_1_1;
-  component system_PmodSF3_0_4 is
+  component system_PmodSF3_0_5 is
   port (
     AXI_LITE_araddr : in STD_LOGIC_VECTOR ( 6 downto 0 );
     AXI_LITE_arready : out STD_LOGIC;
@@ -2157,7 +2057,107 @@ architecture STRUCTURE of system is
     s_axi_aclk : in STD_LOGIC;
     s_axi_aresetn : in STD_LOGIC
   );
-  end component system_PmodSF3_0_4;
+  end component system_PmodSF3_0_5;
+  component system_PmodCLS_0_4 is
+  port (
+    AXI_LITE_SPI_araddr : in STD_LOGIC_VECTOR ( 6 downto 0 );
+    AXI_LITE_SPI_arready : out STD_LOGIC;
+    AXI_LITE_SPI_arvalid : in STD_LOGIC;
+    AXI_LITE_SPI_awaddr : in STD_LOGIC_VECTOR ( 6 downto 0 );
+    AXI_LITE_SPI_awready : out STD_LOGIC;
+    AXI_LITE_SPI_awvalid : in STD_LOGIC;
+    AXI_LITE_SPI_bready : in STD_LOGIC;
+    AXI_LITE_SPI_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    AXI_LITE_SPI_bvalid : out STD_LOGIC;
+    AXI_LITE_SPI_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    AXI_LITE_SPI_rready : in STD_LOGIC;
+    AXI_LITE_SPI_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    AXI_LITE_SPI_rvalid : out STD_LOGIC;
+    AXI_LITE_SPI_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    AXI_LITE_SPI_wready : out STD_LOGIC;
+    AXI_LITE_SPI_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    AXI_LITE_SPI_wvalid : in STD_LOGIC;
+    Pmod_out_pin10_i : in STD_LOGIC;
+    Pmod_out_pin10_o : out STD_LOGIC;
+    Pmod_out_pin10_t : out STD_LOGIC;
+    Pmod_out_pin1_i : in STD_LOGIC;
+    Pmod_out_pin1_o : out STD_LOGIC;
+    Pmod_out_pin1_t : out STD_LOGIC;
+    Pmod_out_pin2_i : in STD_LOGIC;
+    Pmod_out_pin2_o : out STD_LOGIC;
+    Pmod_out_pin2_t : out STD_LOGIC;
+    Pmod_out_pin3_i : in STD_LOGIC;
+    Pmod_out_pin3_o : out STD_LOGIC;
+    Pmod_out_pin3_t : out STD_LOGIC;
+    Pmod_out_pin4_i : in STD_LOGIC;
+    Pmod_out_pin4_o : out STD_LOGIC;
+    Pmod_out_pin4_t : out STD_LOGIC;
+    Pmod_out_pin7_i : in STD_LOGIC;
+    Pmod_out_pin7_o : out STD_LOGIC;
+    Pmod_out_pin7_t : out STD_LOGIC;
+    Pmod_out_pin8_i : in STD_LOGIC;
+    Pmod_out_pin8_o : out STD_LOGIC;
+    Pmod_out_pin8_t : out STD_LOGIC;
+    Pmod_out_pin9_i : in STD_LOGIC;
+    Pmod_out_pin9_o : out STD_LOGIC;
+    Pmod_out_pin9_t : out STD_LOGIC;
+    ext_spi_clk : in STD_LOGIC;
+    s_axi_aclk : in STD_LOGIC;
+    s_axi_aresetn : in STD_LOGIC
+  );
+  end component system_PmodCLS_0_4;
+  component system_PWM_0_2 is
+  port (
+    pwm : out STD_LOGIC_VECTOR ( 5 downto 0 );
+    pwm_axi_aclk : in STD_LOGIC;
+    pwm_axi_aresetn : in STD_LOGIC;
+    pwm_axi_awaddr : in STD_LOGIC_VECTOR ( 6 downto 0 );
+    pwm_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    pwm_axi_awvalid : in STD_LOGIC;
+    pwm_axi_awready : out STD_LOGIC;
+    pwm_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    pwm_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    pwm_axi_wvalid : in STD_LOGIC;
+    pwm_axi_wready : out STD_LOGIC;
+    pwm_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    pwm_axi_bvalid : out STD_LOGIC;
+    pwm_axi_bready : in STD_LOGIC;
+    pwm_axi_araddr : in STD_LOGIC_VECTOR ( 6 downto 0 );
+    pwm_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    pwm_axi_arvalid : in STD_LOGIC;
+    pwm_axi_arready : out STD_LOGIC;
+    pwm_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    pwm_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    pwm_axi_rvalid : out STD_LOGIC;
+    pwm_axi_rready : in STD_LOGIC
+  );
+  end component system_PWM_0_2;
+  component system_PWM_1_2 is
+  port (
+    pwm : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    pwm_axi_aclk : in STD_LOGIC;
+    pwm_axi_aresetn : in STD_LOGIC;
+    pwm_axi_awaddr : in STD_LOGIC_VECTOR ( 6 downto 0 );
+    pwm_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    pwm_axi_awvalid : in STD_LOGIC;
+    pwm_axi_awready : out STD_LOGIC;
+    pwm_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    pwm_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    pwm_axi_wvalid : in STD_LOGIC;
+    pwm_axi_wready : out STD_LOGIC;
+    pwm_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    pwm_axi_bvalid : out STD_LOGIC;
+    pwm_axi_bready : in STD_LOGIC;
+    pwm_axi_araddr : in STD_LOGIC_VECTOR ( 6 downto 0 );
+    pwm_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    pwm_axi_arvalid : in STD_LOGIC;
+    pwm_axi_arready : out STD_LOGIC;
+    pwm_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    pwm_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    pwm_axi_rvalid : out STD_LOGIC;
+    pwm_axi_rready : in STD_LOGIC
+  );
+  end component system_PWM_1_2;
   signal PWM_0_pwm : STD_LOGIC_VECTOR ( 5 downto 0 );
   signal PWM_1_pwm : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal PmodCLS_0_Pmod_out_PIN10_I : STD_LOGIC;
@@ -2497,7 +2497,7 @@ begin
   jc_pin9_t <= PmodSF3_0_Pmod_out_PIN9_T;
   ld0123_basic(3 downto 0) <= PWM_1_pwm(3 downto 0);
   ld56_rgb(5 downto 0) <= PWM_0_pwm(5 downto 0);
-PWM_0: component system_PWM_0_1
+PWM_0: component system_PWM_0_2
      port map (
       pwm(5 downto 0) => PWM_0_pwm(5 downto 0),
       pwm_axi_aclk => processing_system7_0_FCLK_CLK0,
@@ -2522,7 +2522,7 @@ PWM_0: component system_PWM_0_1
       pwm_axi_wstrb(3 downto 0) => ps7_0_axi_periph_M02_AXI_WSTRB(3 downto 0),
       pwm_axi_wvalid => ps7_0_axi_periph_M02_AXI_WVALID
     );
-PWM_1: component system_PWM_1_1
+PWM_1: component system_PWM_1_2
      port map (
       pwm(3 downto 0) => PWM_1_pwm(3 downto 0),
       pwm_axi_aclk => processing_system7_0_FCLK_CLK0,
@@ -2547,25 +2547,25 @@ PWM_1: component system_PWM_1_1
       pwm_axi_wstrb(3 downto 0) => ps7_0_axi_periph_M03_AXI_WSTRB(3 downto 0),
       pwm_axi_wvalid => ps7_0_axi_periph_M03_AXI_WVALID
     );
-PmodCLS_0: component system_PmodCLS_0_3
+PmodCLS_0: component system_PmodCLS_0_4
      port map (
-      AXI_LITE_SPI_araddr(6 downto 0) => ps7_0_axi_periph_M00_AXI_ARADDR(6 downto 0),
-      AXI_LITE_SPI_arready => ps7_0_axi_periph_M00_AXI_ARREADY,
-      AXI_LITE_SPI_arvalid => ps7_0_axi_periph_M00_AXI_ARVALID,
-      AXI_LITE_SPI_awaddr(6 downto 0) => ps7_0_axi_periph_M00_AXI_AWADDR(6 downto 0),
-      AXI_LITE_SPI_awready => ps7_0_axi_periph_M00_AXI_AWREADY,
-      AXI_LITE_SPI_awvalid => ps7_0_axi_periph_M00_AXI_AWVALID,
-      AXI_LITE_SPI_bready => ps7_0_axi_periph_M00_AXI_BREADY,
-      AXI_LITE_SPI_bresp(1 downto 0) => ps7_0_axi_periph_M00_AXI_BRESP(1 downto 0),
-      AXI_LITE_SPI_bvalid => ps7_0_axi_periph_M00_AXI_BVALID,
-      AXI_LITE_SPI_rdata(31 downto 0) => ps7_0_axi_periph_M00_AXI_RDATA(31 downto 0),
-      AXI_LITE_SPI_rready => ps7_0_axi_periph_M00_AXI_RREADY,
-      AXI_LITE_SPI_rresp(1 downto 0) => ps7_0_axi_periph_M00_AXI_RRESP(1 downto 0),
-      AXI_LITE_SPI_rvalid => ps7_0_axi_periph_M00_AXI_RVALID,
-      AXI_LITE_SPI_wdata(31 downto 0) => ps7_0_axi_periph_M00_AXI_WDATA(31 downto 0),
-      AXI_LITE_SPI_wready => ps7_0_axi_periph_M00_AXI_WREADY,
-      AXI_LITE_SPI_wstrb(3 downto 0) => ps7_0_axi_periph_M00_AXI_WSTRB(3 downto 0),
-      AXI_LITE_SPI_wvalid => ps7_0_axi_periph_M00_AXI_WVALID,
+      AXI_LITE_SPI_araddr(6 downto 0) => ps7_0_axi_periph_M01_AXI_ARADDR(6 downto 0),
+      AXI_LITE_SPI_arready => ps7_0_axi_periph_M01_AXI_ARREADY,
+      AXI_LITE_SPI_arvalid => ps7_0_axi_periph_M01_AXI_ARVALID,
+      AXI_LITE_SPI_awaddr(6 downto 0) => ps7_0_axi_periph_M01_AXI_AWADDR(6 downto 0),
+      AXI_LITE_SPI_awready => ps7_0_axi_periph_M01_AXI_AWREADY,
+      AXI_LITE_SPI_awvalid => ps7_0_axi_periph_M01_AXI_AWVALID,
+      AXI_LITE_SPI_bready => ps7_0_axi_periph_M01_AXI_BREADY,
+      AXI_LITE_SPI_bresp(1 downto 0) => ps7_0_axi_periph_M01_AXI_BRESP(1 downto 0),
+      AXI_LITE_SPI_bvalid => ps7_0_axi_periph_M01_AXI_BVALID,
+      AXI_LITE_SPI_rdata(31 downto 0) => ps7_0_axi_periph_M01_AXI_RDATA(31 downto 0),
+      AXI_LITE_SPI_rready => ps7_0_axi_periph_M01_AXI_RREADY,
+      AXI_LITE_SPI_rresp(1 downto 0) => ps7_0_axi_periph_M01_AXI_RRESP(1 downto 0),
+      AXI_LITE_SPI_rvalid => ps7_0_axi_periph_M01_AXI_RVALID,
+      AXI_LITE_SPI_wdata(31 downto 0) => ps7_0_axi_periph_M01_AXI_WDATA(31 downto 0),
+      AXI_LITE_SPI_wready => ps7_0_axi_periph_M01_AXI_WREADY,
+      AXI_LITE_SPI_wstrb(3 downto 0) => ps7_0_axi_periph_M01_AXI_WSTRB(3 downto 0),
+      AXI_LITE_SPI_wvalid => ps7_0_axi_periph_M01_AXI_WVALID,
       Pmod_out_pin10_i => PmodCLS_0_Pmod_out_PIN10_I,
       Pmod_out_pin10_o => PmodCLS_0_Pmod_out_PIN10_O,
       Pmod_out_pin10_t => PmodCLS_0_Pmod_out_PIN10_T,
@@ -2594,25 +2594,25 @@ PmodCLS_0: component system_PmodCLS_0_3
       s_axi_aclk => processing_system7_0_FCLK_CLK0,
       s_axi_aresetn => rst_ps7_0_50M_peripheral_aresetn(0)
     );
-PmodSF3_0: component system_PmodSF3_0_4
+PmodSF3_0: component system_PmodSF3_0_5
      port map (
-      AXI_LITE_araddr(6 downto 0) => ps7_0_axi_periph_M01_AXI_ARADDR(6 downto 0),
-      AXI_LITE_arready => ps7_0_axi_periph_M01_AXI_ARREADY,
-      AXI_LITE_arvalid => ps7_0_axi_periph_M01_AXI_ARVALID,
-      AXI_LITE_awaddr(6 downto 0) => ps7_0_axi_periph_M01_AXI_AWADDR(6 downto 0),
-      AXI_LITE_awready => ps7_0_axi_periph_M01_AXI_AWREADY,
-      AXI_LITE_awvalid => ps7_0_axi_periph_M01_AXI_AWVALID,
-      AXI_LITE_bready => ps7_0_axi_periph_M01_AXI_BREADY,
-      AXI_LITE_bresp(1 downto 0) => ps7_0_axi_periph_M01_AXI_BRESP(1 downto 0),
-      AXI_LITE_bvalid => ps7_0_axi_periph_M01_AXI_BVALID,
-      AXI_LITE_rdata(31 downto 0) => ps7_0_axi_periph_M01_AXI_RDATA(31 downto 0),
-      AXI_LITE_rready => ps7_0_axi_periph_M01_AXI_RREADY,
-      AXI_LITE_rresp(1 downto 0) => ps7_0_axi_periph_M01_AXI_RRESP(1 downto 0),
-      AXI_LITE_rvalid => ps7_0_axi_periph_M01_AXI_RVALID,
-      AXI_LITE_wdata(31 downto 0) => ps7_0_axi_periph_M01_AXI_WDATA(31 downto 0),
-      AXI_LITE_wready => ps7_0_axi_periph_M01_AXI_WREADY,
-      AXI_LITE_wstrb(3 downto 0) => ps7_0_axi_periph_M01_AXI_WSTRB(3 downto 0),
-      AXI_LITE_wvalid => ps7_0_axi_periph_M01_AXI_WVALID,
+      AXI_LITE_araddr(6 downto 0) => ps7_0_axi_periph_M00_AXI_ARADDR(6 downto 0),
+      AXI_LITE_arready => ps7_0_axi_periph_M00_AXI_ARREADY,
+      AXI_LITE_arvalid => ps7_0_axi_periph_M00_AXI_ARVALID,
+      AXI_LITE_awaddr(6 downto 0) => ps7_0_axi_periph_M00_AXI_AWADDR(6 downto 0),
+      AXI_LITE_awready => ps7_0_axi_periph_M00_AXI_AWREADY,
+      AXI_LITE_awvalid => ps7_0_axi_periph_M00_AXI_AWVALID,
+      AXI_LITE_bready => ps7_0_axi_periph_M00_AXI_BREADY,
+      AXI_LITE_bresp(1 downto 0) => ps7_0_axi_periph_M00_AXI_BRESP(1 downto 0),
+      AXI_LITE_bvalid => ps7_0_axi_periph_M00_AXI_BVALID,
+      AXI_LITE_rdata(31 downto 0) => ps7_0_axi_periph_M00_AXI_RDATA(31 downto 0),
+      AXI_LITE_rready => ps7_0_axi_periph_M00_AXI_RREADY,
+      AXI_LITE_rresp(1 downto 0) => ps7_0_axi_periph_M00_AXI_RRESP(1 downto 0),
+      AXI_LITE_rvalid => ps7_0_axi_periph_M00_AXI_RVALID,
+      AXI_LITE_wdata(31 downto 0) => ps7_0_axi_periph_M00_AXI_WDATA(31 downto 0),
+      AXI_LITE_wready => ps7_0_axi_periph_M00_AXI_WREADY,
+      AXI_LITE_wstrb(3 downto 0) => ps7_0_axi_periph_M00_AXI_WSTRB(3 downto 0),
+      AXI_LITE_wvalid => ps7_0_axi_periph_M00_AXI_WVALID,
       Pmod_out_pin10_i => PmodSF3_0_Pmod_out_PIN10_I,
       Pmod_out_pin10_o => PmodSF3_0_Pmod_out_PIN10_O,
       Pmod_out_pin10_t => PmodSF3_0_Pmod_out_PIN10_T,
