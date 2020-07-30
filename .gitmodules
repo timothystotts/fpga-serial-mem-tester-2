@@ -1,0 +1,3 @@
+[submodule "SF-Tester-Design-Zynq/IP/vivado-library"]
+	path = SF-Tester-Design-Zynq/IP/vivado-library
+	url = git@github.com:timothystotts/vivado-library.git
