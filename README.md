@@ -1,2 +1,30 @@
 # fpga-serial-mem-tester-2
-A small AP SoC project of Zynq-7000 implementation for testing byte-by-byte a serial flash
+
+FPGA Serial Mem Tester Version 2
+
+
+## Description
+A small AP SoC project of Zynq-7000 implementation for testing a N25Q Serial Flash.
+The design targets the Digilent Inc. Zybo-Z7-20 FPGA development board containing a
+Xilinx Zynq-7000 FPGA.
+Two peripherals are used: Digilent Inc. Pmod SF3, Digilent Inc. Pmod CLS.
+
+The folder SF-Tester-Design-Zynq contains a Xilinx Vivado IP Integrator plus
+Xilinx Vitis design. The Zynq hard ARM CPU #0 is configured to talk with board
+components,
+a SPI Flash peripheral, and
+a 16x2 character LCD peripheral.
+
+Sources to be incorporated into a Xilinx Vitis project contain
+a very small FreeRTOS program in C; drivers
+for the peripherals, a real-time task to operate the flash chip,
+two real-time tasks to display data, and a real-time task to color-mix RGB LEDs.
+
+### Project information document:
+
+./Serial Flash Sector Tester - Zynq.pdf
+
+[Serial Flash Sector Tester for Zynq info](https://github.com/timothystotts/fpga-serial-mem-tester-2/blob/master/Serial%20Flash%20Sector%20Tester%20-%20Zynq.pdf)
+
+#### Target device assembly: Zybo-Z7-20 with Pmod SF3, Pmod CLS on extension cable
+![Target device assembly](https://github.com/timothystotts/fpga-serial-mem-tester-1/blob/master/SF-Tester-Design-Documents/img_serial-flash-tester-zynq-assembled-20200730.jpg)
