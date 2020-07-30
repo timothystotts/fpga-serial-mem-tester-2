@@ -27,4 +27,4 @@ two real-time tasks to display data, and a real-time task to color-mix RGB LEDs.
 [Serial Flash Sector Tester for Zynq info](https://github.com/timothystotts/fpga-serial-mem-tester-2/blob/master/Serial%20Flash%20Sector%20Tester%20-%20Zynq.pdf)
 
 #### Target device assembly: Zybo-Z7-20 with Pmod SF3, Pmod CLS on extension cable
-![Target device assembly](https://github.com/timothystotts/fpga-serial-mem-tester-1/blob/master/img_serial-flash-tester-zynq-assembled-20200730.jpg)
+![Target device assembly](https://github.com/timothystotts/fpga-serial-mem-tester-2/blob/master/img_serial-flash-tester-zynq-assembled-20200730.jpg)
