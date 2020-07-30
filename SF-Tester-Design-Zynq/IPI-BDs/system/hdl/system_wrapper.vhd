@@ -1,8 +1,8 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Wed Jul 29 22:57:50 2020
---Host        : J1STUDY running 64-bit major release  (build 9200)
+--Tool Version: Vivado v.2020.1 (lin64) Build 2902540 Wed May 27 19:54:35 MDT 2020
+--Date        : Thu Jul 30 13:34:13 2020
+--Host        : l2study running 64-bit Ubuntu 18.04.4 LTS
 --Command     : generate_target system_wrapper.bd
 --Design      : system_wrapper
 --Purpose     : IP block netlist
@@ -62,12 +62,6 @@ architecture STRUCTURE of system_wrapper is
   port (
     ld56_rgb : out STD_LOGIC_VECTOR ( 5 downto 0 );
     ld0123_basic : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
-    FIXED_IO_ddr_vrn : inout STD_LOGIC;
-    FIXED_IO_ddr_vrp : inout STD_LOGIC;
-    FIXED_IO_ps_srstb : inout STD_LOGIC;
-    FIXED_IO_ps_clk : inout STD_LOGIC;
-    FIXED_IO_ps_porb : inout STD_LOGIC;
     DDR_cas_n : inout STD_LOGIC;
     DDR_cke : inout STD_LOGIC;
     DDR_ck_n : inout STD_LOGIC;
@@ -83,32 +77,14 @@ architecture STRUCTURE of system_wrapper is
     DDR_dq : inout STD_LOGIC_VECTOR ( 31 downto 0 );
     DDR_dqs_n : inout STD_LOGIC_VECTOR ( 3 downto 0 );
     DDR_dqs_p : inout STD_LOGIC_VECTOR ( 3 downto 0 );
+    FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
+    FIXED_IO_ddr_vrn : inout STD_LOGIC;
+    FIXED_IO_ddr_vrp : inout STD_LOGIC;
+    FIXED_IO_ps_srstb : inout STD_LOGIC;
+    FIXED_IO_ps_clk : inout STD_LOGIC;
+    FIXED_IO_ps_porb : inout STD_LOGIC;
     sws_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
     btns_4bits_tri_i : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    jc_pin1_o : out STD_LOGIC;
-    jc_pin7_i : in STD_LOGIC;
-    jc_pin2_o : out STD_LOGIC;
-    jc_pin8_i : in STD_LOGIC;
-    jc_pin3_o : out STD_LOGIC;
-    jc_pin9_i : in STD_LOGIC;
-    jc_pin10_o : out STD_LOGIC;
-    jc_pin4_o : out STD_LOGIC;
-    jc_pin3_i : in STD_LOGIC;
-    jc_pin4_i : in STD_LOGIC;
-    jc_pin1_i : in STD_LOGIC;
-    jc_pin2_i : in STD_LOGIC;
-    jc_pin10_t : out STD_LOGIC;
-    jc_pin8_t : out STD_LOGIC;
-    jc_pin9_t : out STD_LOGIC;
-    jc_pin4_t : out STD_LOGIC;
-    jc_pin9_o : out STD_LOGIC;
-    jc_pin10_i : in STD_LOGIC;
-    jc_pin7_t : out STD_LOGIC;
-    jc_pin1_t : out STD_LOGIC;
-    jc_pin2_t : out STD_LOGIC;
-    jc_pin7_o : out STD_LOGIC;
-    jc_pin3_t : out STD_LOGIC;
-    jc_pin8_o : out STD_LOGIC;
     jb_pin1_o : out STD_LOGIC;
     jb_pin7_i : in STD_LOGIC;
     jb_pin2_o : out STD_LOGIC;
@@ -132,7 +108,31 @@ architecture STRUCTURE of system_wrapper is
     jb_pin2_t : out STD_LOGIC;
     jb_pin7_o : out STD_LOGIC;
     jb_pin3_t : out STD_LOGIC;
-    jb_pin8_o : out STD_LOGIC
+    jb_pin8_o : out STD_LOGIC;
+    jc_pin1_o : out STD_LOGIC;
+    jc_pin7_i : in STD_LOGIC;
+    jc_pin2_o : out STD_LOGIC;
+    jc_pin8_i : in STD_LOGIC;
+    jc_pin3_o : out STD_LOGIC;
+    jc_pin9_i : in STD_LOGIC;
+    jc_pin10_o : out STD_LOGIC;
+    jc_pin4_o : out STD_LOGIC;
+    jc_pin3_i : in STD_LOGIC;
+    jc_pin4_i : in STD_LOGIC;
+    jc_pin1_i : in STD_LOGIC;
+    jc_pin2_i : in STD_LOGIC;
+    jc_pin10_t : out STD_LOGIC;
+    jc_pin8_t : out STD_LOGIC;
+    jc_pin9_t : out STD_LOGIC;
+    jc_pin4_t : out STD_LOGIC;
+    jc_pin9_o : out STD_LOGIC;
+    jc_pin10_i : in STD_LOGIC;
+    jc_pin7_t : out STD_LOGIC;
+    jc_pin1_t : out STD_LOGIC;
+    jc_pin2_t : out STD_LOGIC;
+    jc_pin7_o : out STD_LOGIC;
+    jc_pin3_t : out STD_LOGIC;
+    jc_pin8_o : out STD_LOGIC
   );
   end component system;
   component IOBUF is

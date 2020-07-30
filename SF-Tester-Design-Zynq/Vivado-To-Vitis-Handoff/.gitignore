@@ -1,0 +1,6 @@
+ps7*.c
+ps7*.h
+*.html
+*.bit
+*.tcl
+drivers/
