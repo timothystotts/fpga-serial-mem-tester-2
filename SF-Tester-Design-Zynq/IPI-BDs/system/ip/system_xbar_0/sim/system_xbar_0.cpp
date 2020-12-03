@@ -570,6 +570,9 @@ void system_xbar_0::before_end_of_elaboration()
     mp_impl->target_0_rd_socket->bind(*(mp_S00_AXI_transactor->rd_socket));
     mp_impl->target_0_wr_socket->bind(*(mp_S00_AXI_transactor->wr_socket));
   }
+  else
+  {
+  }
 
   // configure 'M00_AXI' transactor
 
@@ -699,6 +702,9 @@ void system_xbar_0::before_end_of_elaboration()
 
     mp_impl->initiator_0_rd_socket->bind(*(mp_M00_AXI_transactor->rd_socket));
     mp_impl->initiator_0_wr_socket->bind(*(mp_M00_AXI_transactor->wr_socket));
+  }
+  else
+  {
   }
 
   // configure 'M01_AXI' transactor
@@ -830,6 +836,9 @@ void system_xbar_0::before_end_of_elaboration()
     mp_impl->initiator_1_rd_socket->bind(*(mp_M01_AXI_transactor->rd_socket));
     mp_impl->initiator_1_wr_socket->bind(*(mp_M01_AXI_transactor->wr_socket));
   }
+  else
+  {
+  }
 
   // configure 'M02_AXI' transactor
 
@@ -858,8 +867,8 @@ void system_xbar_0::before_end_of_elaboration()
     M02_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     M02_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     M02_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    M02_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
-    M02_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
+    M02_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    M02_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
     M02_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "1");
     M02_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M02_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
@@ -960,6 +969,9 @@ void system_xbar_0::before_end_of_elaboration()
     mp_impl->initiator_2_rd_socket->bind(*(mp_M02_AXI_transactor->rd_socket));
     mp_impl->initiator_2_wr_socket->bind(*(mp_M02_AXI_transactor->wr_socket));
   }
+  else
+  {
+  }
 
   // configure 'M03_AXI' transactor
 
@@ -988,8 +1000,8 @@ void system_xbar_0::before_end_of_elaboration()
     M03_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     M03_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     M03_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    M03_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
-    M03_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
+    M03_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    M03_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
     M03_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "1");
     M03_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M03_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
@@ -1090,6 +1102,9 @@ void system_xbar_0::before_end_of_elaboration()
     mp_impl->initiator_3_rd_socket->bind(*(mp_M03_AXI_transactor->rd_socket));
     mp_impl->initiator_3_wr_socket->bind(*(mp_M03_AXI_transactor->wr_socket));
   }
+  else
+  {
+  }
 
   // configure 'M04_AXI' transactor
 
@@ -1118,8 +1133,8 @@ void system_xbar_0::before_end_of_elaboration()
     M04_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     M04_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     M04_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    M04_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
-    M04_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
+    M04_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    M04_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
     M04_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "1");
     M04_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M04_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
@@ -1219,6 +1234,9 @@ void system_xbar_0::before_end_of_elaboration()
 
     mp_impl->initiator_4_rd_socket->bind(*(mp_M04_AXI_transactor->rd_socket));
     mp_impl->initiator_4_wr_socket->bind(*(mp_M04_AXI_transactor->wr_socket));
+  }
+  else
+  {
   }
 
 }
@@ -1738,6 +1756,9 @@ void system_xbar_0::before_end_of_elaboration()
     mp_impl->target_0_rd_socket->bind(*(mp_S00_AXI_transactor->rd_socket));
     mp_impl->target_0_wr_socket->bind(*(mp_S00_AXI_transactor->wr_socket));
   }
+  else
+  {
+  }
 
   // configure 'M00_AXI' transactor
 
@@ -1867,6 +1888,9 @@ void system_xbar_0::before_end_of_elaboration()
 
     mp_impl->initiator_0_rd_socket->bind(*(mp_M00_AXI_transactor->rd_socket));
     mp_impl->initiator_0_wr_socket->bind(*(mp_M00_AXI_transactor->wr_socket));
+  }
+  else
+  {
   }
 
   // configure 'M01_AXI' transactor
@@ -1998,6 +2022,9 @@ void system_xbar_0::before_end_of_elaboration()
     mp_impl->initiator_1_rd_socket->bind(*(mp_M01_AXI_transactor->rd_socket));
     mp_impl->initiator_1_wr_socket->bind(*(mp_M01_AXI_transactor->wr_socket));
   }
+  else
+  {
+  }
 
   // configure 'M02_AXI' transactor
 
@@ -2026,8 +2053,8 @@ void system_xbar_0::before_end_of_elaboration()
     M02_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     M02_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     M02_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    M02_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
-    M02_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
+    M02_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    M02_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
     M02_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "1");
     M02_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M02_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
@@ -2128,6 +2155,9 @@ void system_xbar_0::before_end_of_elaboration()
     mp_impl->initiator_2_rd_socket->bind(*(mp_M02_AXI_transactor->rd_socket));
     mp_impl->initiator_2_wr_socket->bind(*(mp_M02_AXI_transactor->wr_socket));
   }
+  else
+  {
+  }
 
   // configure 'M03_AXI' transactor
 
@@ -2156,8 +2186,8 @@ void system_xbar_0::before_end_of_elaboration()
     M03_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     M03_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     M03_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    M03_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
-    M03_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
+    M03_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    M03_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
     M03_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "1");
     M03_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M03_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
@@ -2258,6 +2288,9 @@ void system_xbar_0::before_end_of_elaboration()
     mp_impl->initiator_3_rd_socket->bind(*(mp_M03_AXI_transactor->rd_socket));
     mp_impl->initiator_3_wr_socket->bind(*(mp_M03_AXI_transactor->wr_socket));
   }
+  else
+  {
+  }
 
   // configure 'M04_AXI' transactor
 
@@ -2286,8 +2319,8 @@ void system_xbar_0::before_end_of_elaboration()
     M04_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     M04_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     M04_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    M04_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
-    M04_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
+    M04_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    M04_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
     M04_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "1");
     M04_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M04_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
@@ -2387,6 +2420,9 @@ void system_xbar_0::before_end_of_elaboration()
 
     mp_impl->initiator_4_rd_socket->bind(*(mp_M04_AXI_transactor->rd_socket));
     mp_impl->initiator_4_wr_socket->bind(*(mp_M04_AXI_transactor->wr_socket));
+  }
+  else
+  {
   }
 
 }
@@ -2906,6 +2942,9 @@ void system_xbar_0::before_end_of_elaboration()
     mp_impl->target_0_rd_socket->bind(*(mp_S00_AXI_transactor->rd_socket));
     mp_impl->target_0_wr_socket->bind(*(mp_S00_AXI_transactor->wr_socket));
   }
+  else
+  {
+  }
 
   // configure 'M00_AXI' transactor
 
@@ -3035,6 +3074,9 @@ void system_xbar_0::before_end_of_elaboration()
 
     mp_impl->initiator_0_rd_socket->bind(*(mp_M00_AXI_transactor->rd_socket));
     mp_impl->initiator_0_wr_socket->bind(*(mp_M00_AXI_transactor->wr_socket));
+  }
+  else
+  {
   }
 
   // configure 'M01_AXI' transactor
@@ -3166,6 +3208,9 @@ void system_xbar_0::before_end_of_elaboration()
     mp_impl->initiator_1_rd_socket->bind(*(mp_M01_AXI_transactor->rd_socket));
     mp_impl->initiator_1_wr_socket->bind(*(mp_M01_AXI_transactor->wr_socket));
   }
+  else
+  {
+  }
 
   // configure 'M02_AXI' transactor
 
@@ -3194,8 +3239,8 @@ void system_xbar_0::before_end_of_elaboration()
     M02_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     M02_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     M02_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    M02_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
-    M02_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
+    M02_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    M02_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
     M02_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "1");
     M02_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M02_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
@@ -3296,6 +3341,9 @@ void system_xbar_0::before_end_of_elaboration()
     mp_impl->initiator_2_rd_socket->bind(*(mp_M02_AXI_transactor->rd_socket));
     mp_impl->initiator_2_wr_socket->bind(*(mp_M02_AXI_transactor->wr_socket));
   }
+  else
+  {
+  }
 
   // configure 'M03_AXI' transactor
 
@@ -3324,8 +3372,8 @@ void system_xbar_0::before_end_of_elaboration()
     M03_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     M03_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     M03_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    M03_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
-    M03_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
+    M03_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    M03_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
     M03_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "1");
     M03_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M03_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
@@ -3426,6 +3474,9 @@ void system_xbar_0::before_end_of_elaboration()
     mp_impl->initiator_3_rd_socket->bind(*(mp_M03_AXI_transactor->rd_socket));
     mp_impl->initiator_3_wr_socket->bind(*(mp_M03_AXI_transactor->wr_socket));
   }
+  else
+  {
+  }
 
   // configure 'M04_AXI' transactor
 
@@ -3454,8 +3505,8 @@ void system_xbar_0::before_end_of_elaboration()
     M04_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     M04_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     M04_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    M04_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
-    M04_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
+    M04_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    M04_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
     M04_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "1");
     M04_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M04_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
@@ -3555,6 +3606,9 @@ void system_xbar_0::before_end_of_elaboration()
 
     mp_impl->initiator_4_rd_socket->bind(*(mp_M04_AXI_transactor->rd_socket));
     mp_impl->initiator_4_wr_socket->bind(*(mp_M04_AXI_transactor->wr_socket));
+  }
+  else
+  {
   }
 
 }
@@ -3684,7 +3738,7 @@ system_xbar_0::system_xbar_0(const sc_core::sc_module_name& nm) : system_xbar_0_
   mp_m_axi_rvalid_converter_4 = NULL;
   mp_m_axi_rready_converter_4 = NULL;
 
-  // initialize junctures
+  // initialize port junctures
   mp_m_axi_concat_araddr = NULL;
   mp_m_axi_concat_arprot = NULL;
   mp_m_axi_concat_arvalid = NULL;
@@ -3704,6 +3758,7 @@ system_xbar_0::system_xbar_0(const sc_core::sc_module_name& nm) : system_xbar_0_
   mp_m_axi_split_rresp = NULL;
   mp_m_axi_split_rvalid = NULL;
   mp_m_axi_split_wready = NULL;
+
   // Instantiate Socket Stubs
 
   // configure S00_AXI_transactor
@@ -3793,7 +3848,6 @@ system_xbar_0::system_xbar_0(const sc_core::sc_module_name& nm) : system_xbar_0_
   mp_S00_AXI_transactor->RREADY(m_s_axi_rready_converter_signal);
   mp_S00_AXI_transactor->CLK(aclk);
   mp_S00_AXI_transactor->RST(aresetn);
-
   // configure M00_AXI_transactor
     xsc::common_cpp::properties M00_AXI_transactor_param_props;
     M00_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
@@ -3984,7 +4038,6 @@ system_xbar_0::system_xbar_0(const sc_core::sc_module_name& nm) : system_xbar_0_
   mp_M00_AXI_transactor->RREADY(m_m_axi_rready_converter_0_signal);
   mp_M00_AXI_transactor->CLK(aclk);
   mp_M00_AXI_transactor->RST(aresetn);
-
   // configure M01_AXI_transactor
     xsc::common_cpp::properties M01_AXI_transactor_param_props;
     M01_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
@@ -4145,7 +4198,6 @@ system_xbar_0::system_xbar_0(const sc_core::sc_module_name& nm) : system_xbar_0_
   mp_M01_AXI_transactor->RREADY(m_m_axi_rready_converter_1_signal);
   mp_M01_AXI_transactor->CLK(aclk);
   mp_M01_AXI_transactor->RST(aresetn);
-
   // configure M02_AXI_transactor
     xsc::common_cpp::properties M02_AXI_transactor_param_props;
     M02_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
@@ -4167,8 +4219,8 @@ system_xbar_0::system_xbar_0(const sc_core::sc_module_name& nm) : system_xbar_0_
     M02_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     M02_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     M02_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    M02_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
-    M02_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
+    M02_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    M02_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
     M02_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "1");
     M02_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M02_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
@@ -4306,7 +4358,6 @@ system_xbar_0::system_xbar_0(const sc_core::sc_module_name& nm) : system_xbar_0_
   mp_M02_AXI_transactor->RREADY(m_m_axi_rready_converter_2_signal);
   mp_M02_AXI_transactor->CLK(aclk);
   mp_M02_AXI_transactor->RST(aresetn);
-
   // configure M03_AXI_transactor
     xsc::common_cpp::properties M03_AXI_transactor_param_props;
     M03_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
@@ -4328,8 +4379,8 @@ system_xbar_0::system_xbar_0(const sc_core::sc_module_name& nm) : system_xbar_0_
     M03_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     M03_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     M03_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    M03_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
-    M03_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
+    M03_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    M03_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
     M03_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "1");
     M03_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M03_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
@@ -4467,7 +4518,6 @@ system_xbar_0::system_xbar_0(const sc_core::sc_module_name& nm) : system_xbar_0_
   mp_M03_AXI_transactor->RREADY(m_m_axi_rready_converter_3_signal);
   mp_M03_AXI_transactor->CLK(aclk);
   mp_M03_AXI_transactor->RST(aresetn);
-
   // configure M04_AXI_transactor
     xsc::common_cpp::properties M04_AXI_transactor_param_props;
     M04_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
@@ -4489,8 +4539,8 @@ system_xbar_0::system_xbar_0(const sc_core::sc_module_name& nm) : system_xbar_0_
     M04_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     M04_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     M04_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    M04_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
-    M04_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
+    M04_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    M04_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
     M04_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "1");
     M04_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M04_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
@@ -4629,7 +4679,6 @@ system_xbar_0::system_xbar_0(const sc_core::sc_module_name& nm) : system_xbar_0_
   mp_M04_AXI_transactor->CLK(aclk);
   mp_M04_AXI_transactor->RST(aresetn);
 
-
   // initialize transactors stubs
   S00_AXI_transactor_target_wr_socket_stub = nullptr;
   S00_AXI_transactor_target_rd_socket_stub = nullptr;
@@ -4653,6 +4702,7 @@ void system_xbar_0::before_end_of_elaboration()
   {
     mp_impl->target_0_rd_socket->bind(*(mp_S00_AXI_transactor->rd_socket));
     mp_impl->target_0_wr_socket->bind(*(mp_S00_AXI_transactor->wr_socket));
+  
   }
   else
   {
@@ -4668,6 +4718,7 @@ void system_xbar_0::before_end_of_elaboration()
   {
     mp_impl->initiator_0_rd_socket->bind(*(mp_M00_AXI_transactor->rd_socket));
     mp_impl->initiator_0_wr_socket->bind(*(mp_M00_AXI_transactor->wr_socket));
+  
   }
   else
   {
@@ -4683,6 +4734,7 @@ void system_xbar_0::before_end_of_elaboration()
   {
     mp_impl->initiator_1_rd_socket->bind(*(mp_M01_AXI_transactor->rd_socket));
     mp_impl->initiator_1_wr_socket->bind(*(mp_M01_AXI_transactor->wr_socket));
+  
   }
   else
   {
@@ -4698,6 +4750,7 @@ void system_xbar_0::before_end_of_elaboration()
   {
     mp_impl->initiator_2_rd_socket->bind(*(mp_M02_AXI_transactor->rd_socket));
     mp_impl->initiator_2_wr_socket->bind(*(mp_M02_AXI_transactor->wr_socket));
+  
   }
   else
   {
@@ -4713,6 +4766,7 @@ void system_xbar_0::before_end_of_elaboration()
   {
     mp_impl->initiator_3_rd_socket->bind(*(mp_M03_AXI_transactor->rd_socket));
     mp_impl->initiator_3_wr_socket->bind(*(mp_M03_AXI_transactor->wr_socket));
+  
   }
   else
   {
@@ -4728,6 +4782,7 @@ void system_xbar_0::before_end_of_elaboration()
   {
     mp_impl->initiator_4_rd_socket->bind(*(mp_M04_AXI_transactor->rd_socket));
     mp_impl->initiator_4_wr_socket->bind(*(mp_M04_AXI_transactor->wr_socket));
+  
   }
   else
   {
@@ -4865,7 +4920,7 @@ system_xbar_0::system_xbar_0(const sc_core::sc_module_name& nm) : system_xbar_0_
   mp_m_axi_rvalid_converter_4 = NULL;
   mp_m_axi_rready_converter_4 = NULL;
 
-  // initialize junctures
+  // initialize port junctures
   mp_m_axi_concat_araddr = NULL;
   mp_m_axi_concat_arprot = NULL;
   mp_m_axi_concat_arvalid = NULL;
@@ -4885,6 +4940,7 @@ system_xbar_0::system_xbar_0(const sc_core::sc_module_name& nm) : system_xbar_0_
   mp_m_axi_split_rresp = NULL;
   mp_m_axi_split_rvalid = NULL;
   mp_m_axi_split_wready = NULL;
+
   // Instantiate Socket Stubs
 
   // configure S00_AXI_transactor
@@ -4974,7 +5030,6 @@ system_xbar_0::system_xbar_0(const sc_core::sc_module_name& nm) : system_xbar_0_
   mp_S00_AXI_transactor->RREADY(m_s_axi_rready_converter_signal);
   mp_S00_AXI_transactor->CLK(aclk);
   mp_S00_AXI_transactor->RST(aresetn);
-
   // configure M00_AXI_transactor
     xsc::common_cpp::properties M00_AXI_transactor_param_props;
     M00_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
@@ -5165,7 +5220,6 @@ system_xbar_0::system_xbar_0(const sc_core::sc_module_name& nm) : system_xbar_0_
   mp_M00_AXI_transactor->RREADY(m_m_axi_rready_converter_0_signal);
   mp_M00_AXI_transactor->CLK(aclk);
   mp_M00_AXI_transactor->RST(aresetn);
-
   // configure M01_AXI_transactor
     xsc::common_cpp::properties M01_AXI_transactor_param_props;
     M01_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
@@ -5326,7 +5380,6 @@ system_xbar_0::system_xbar_0(const sc_core::sc_module_name& nm) : system_xbar_0_
   mp_M01_AXI_transactor->RREADY(m_m_axi_rready_converter_1_signal);
   mp_M01_AXI_transactor->CLK(aclk);
   mp_M01_AXI_transactor->RST(aresetn);
-
   // configure M02_AXI_transactor
     xsc::common_cpp::properties M02_AXI_transactor_param_props;
     M02_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
@@ -5348,8 +5401,8 @@ system_xbar_0::system_xbar_0(const sc_core::sc_module_name& nm) : system_xbar_0_
     M02_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     M02_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     M02_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    M02_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
-    M02_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
+    M02_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    M02_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
     M02_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "1");
     M02_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M02_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
@@ -5487,7 +5540,6 @@ system_xbar_0::system_xbar_0(const sc_core::sc_module_name& nm) : system_xbar_0_
   mp_M02_AXI_transactor->RREADY(m_m_axi_rready_converter_2_signal);
   mp_M02_AXI_transactor->CLK(aclk);
   mp_M02_AXI_transactor->RST(aresetn);
-
   // configure M03_AXI_transactor
     xsc::common_cpp::properties M03_AXI_transactor_param_props;
     M03_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
@@ -5509,8 +5561,8 @@ system_xbar_0::system_xbar_0(const sc_core::sc_module_name& nm) : system_xbar_0_
     M03_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     M03_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     M03_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    M03_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
-    M03_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
+    M03_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    M03_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
     M03_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "1");
     M03_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M03_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
@@ -5648,7 +5700,6 @@ system_xbar_0::system_xbar_0(const sc_core::sc_module_name& nm) : system_xbar_0_
   mp_M03_AXI_transactor->RREADY(m_m_axi_rready_converter_3_signal);
   mp_M03_AXI_transactor->CLK(aclk);
   mp_M03_AXI_transactor->RST(aresetn);
-
   // configure M04_AXI_transactor
     xsc::common_cpp::properties M04_AXI_transactor_param_props;
     M04_AXI_transactor_param_props.addLong("DATA_WIDTH", "32");
@@ -5670,8 +5721,8 @@ system_xbar_0::system_xbar_0(const sc_core::sc_module_name& nm) : system_xbar_0_
     M04_AXI_transactor_param_props.addLong("HAS_BRESP", "1");
     M04_AXI_transactor_param_props.addLong("HAS_RRESP", "1");
     M04_AXI_transactor_param_props.addLong("SUPPORTS_NARROW_BURST", "0");
-    M04_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "1");
-    M04_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "1");
+    M04_AXI_transactor_param_props.addLong("NUM_READ_OUTSTANDING", "2");
+    M04_AXI_transactor_param_props.addLong("NUM_WRITE_OUTSTANDING", "2");
     M04_AXI_transactor_param_props.addLong("MAX_BURST_LENGTH", "1");
     M04_AXI_transactor_param_props.addLong("NUM_READ_THREADS", "1");
     M04_AXI_transactor_param_props.addLong("NUM_WRITE_THREADS", "1");
@@ -5810,7 +5861,6 @@ system_xbar_0::system_xbar_0(const sc_core::sc_module_name& nm) : system_xbar_0_
   mp_M04_AXI_transactor->CLK(aclk);
   mp_M04_AXI_transactor->RST(aresetn);
 
-
   // initialize transactors stubs
   S00_AXI_transactor_target_wr_socket_stub = nullptr;
   S00_AXI_transactor_target_rd_socket_stub = nullptr;
@@ -5834,6 +5884,7 @@ void system_xbar_0::before_end_of_elaboration()
   {
     mp_impl->target_0_rd_socket->bind(*(mp_S00_AXI_transactor->rd_socket));
     mp_impl->target_0_wr_socket->bind(*(mp_S00_AXI_transactor->wr_socket));
+  
   }
   else
   {
@@ -5849,6 +5900,7 @@ void system_xbar_0::before_end_of_elaboration()
   {
     mp_impl->initiator_0_rd_socket->bind(*(mp_M00_AXI_transactor->rd_socket));
     mp_impl->initiator_0_wr_socket->bind(*(mp_M00_AXI_transactor->wr_socket));
+  
   }
   else
   {
@@ -5864,6 +5916,7 @@ void system_xbar_0::before_end_of_elaboration()
   {
     mp_impl->initiator_1_rd_socket->bind(*(mp_M01_AXI_transactor->rd_socket));
     mp_impl->initiator_1_wr_socket->bind(*(mp_M01_AXI_transactor->wr_socket));
+  
   }
   else
   {
@@ -5879,6 +5932,7 @@ void system_xbar_0::before_end_of_elaboration()
   {
     mp_impl->initiator_2_rd_socket->bind(*(mp_M02_AXI_transactor->rd_socket));
     mp_impl->initiator_2_wr_socket->bind(*(mp_M02_AXI_transactor->wr_socket));
+  
   }
   else
   {
@@ -5894,6 +5948,7 @@ void system_xbar_0::before_end_of_elaboration()
   {
     mp_impl->initiator_3_rd_socket->bind(*(mp_M03_AXI_transactor->rd_socket));
     mp_impl->initiator_3_wr_socket->bind(*(mp_M03_AXI_transactor->wr_socket));
+  
   }
   else
   {
@@ -5909,6 +5964,7 @@ void system_xbar_0::before_end_of_elaboration()
   {
     mp_impl->initiator_4_rd_socket->bind(*(mp_M04_AXI_transactor->rd_socket));
     mp_impl->initiator_4_wr_socket->bind(*(mp_M04_AXI_transactor->wr_socket));
+  
   }
   else
   {

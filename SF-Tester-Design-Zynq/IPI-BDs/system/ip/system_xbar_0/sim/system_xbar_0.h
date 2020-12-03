@@ -121,6 +121,9 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<5> > m_axi_rvalid;
   sc_core::sc_out< sc_dt::sc_bv<5> > m_axi_rready;
 
+  // Dummy Signals for IP Ports
+
+
 protected:
 
   virtual void before_end_of_elaboration();
@@ -560,6 +563,9 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<5> > m_axi_rvalid;
   sc_core::sc_out< sc_dt::sc_bv<5> > m_axi_rready;
 
+  // Dummy Signals for IP Ports
+
+
 protected:
 
   virtual void before_end_of_elaboration();
@@ -998,6 +1004,9 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<10> > m_axi_rresp;
   sc_core::sc_in< sc_dt::sc_bv<5> > m_axi_rvalid;
   sc_core::sc_out< sc_dt::sc_bv<5> > m_axi_rready;
+
+  // Dummy Signals for IP Ports
+
 
 protected:
 
@@ -1441,6 +1450,9 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<10> > m_axi_rresp;
   sc_core::sc_in< sc_dt::sc_bv<5> > m_axi_rvalid;
   sc_core::sc_out< sc_dt::sc_bv<5> > m_axi_rready;
+
+  // Dummy Signals for IP Ports
+
 
 protected:
 
@@ -1900,6 +1912,9 @@ public:
   sc_core::sc_in< sc_dt::sc_bv<10> > m_axi_rresp;
   sc_core::sc_in< sc_dt::sc_bv<5> > m_axi_rvalid;
   sc_core::sc_out< sc_dt::sc_bv<5> > m_axi_rready;
+
+  // Dummy Signals for IP Ports
+
 
 protected:
 

@@ -1,52 +1,52 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"0.603529",
-   "Default View_TopLeft":"-239,3",
+   "Default View_TopLeft":"-255,3",
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:9.0 TLS
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 5 -x 1300 -y 70 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 5 -x 1300 -y 90 -defaultsOSRD
-preplace port jb -pg 1 -lvl 5 -x 1300 -y 620 -defaultsOSRD
-preplace port jc -pg 1 -lvl 5 -x 1300 -y 170 -defaultsOSRD
-preplace port sws_4bits -pg 1 -lvl 5 -x 1300 -y 760 -defaultsOSRD
-preplace port btns_4bits -pg 1 -lvl 5 -x 1300 -y 780 -defaultsOSRD
-preplace portBus ld56_rgb -pg 1 -lvl 5 -x 1300 -y 330 -defaultsOSRD
-preplace portBus ld0123_basic -pg 1 -lvl 5 -x 1300 -y 470 -defaultsOSRD
+preplace port DDR -pg 1 -lvl 5 -x 1310 -y 70 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 5 -x 1310 -y 90 -defaultsOSRD
+preplace port jb -pg 1 -lvl 5 -x 1310 -y 620 -defaultsOSRD
+preplace port jc -pg 1 -lvl 5 -x 1310 -y 170 -defaultsOSRD
+preplace port sws_4bits -pg 1 -lvl 5 -x 1310 -y 760 -defaultsOSRD
+preplace port btns_4bits -pg 1 -lvl 5 -x 1310 -y 780 -defaultsOSRD
+preplace portBus ld56_rgb -pg 1 -lvl 5 -x 1310 -y 330 -defaultsOSRD
+preplace portBus ld0123_basic -pg 1 -lvl 5 -x 1310 -y 470 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 2 -x 430 -y 120 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 3 -x 810 -y 310 -defaultsOSRD
 preplace inst rst_ps7_0_50M -pg 1 -lvl 2 -x 430 -y 330 -defaultsOSRD
+preplace inst PWM_0 -pg 1 -lvl 4 -x 1150 -y 330 -defaultsOSRD
+preplace inst PWM_1 -pg 1 -lvl 4 -x 1150 -y 470 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 4 -x 1150 -y 770 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 3 -x 810 -y 310 -defaultsOSRD
 preplace inst xlconcat_0 -pg 1 -lvl 1 -x 120 -y 130 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 4 -x 1140 -y 770 -defaultsOSRD
-preplace inst PmodSF3_0 -pg 1 -lvl 4 -x 1140 -y 180 -defaultsOSRD
-preplace inst PmodCLS_0 -pg 1 -lvl 4 -x 1140 -y 620 -defaultsOSRD
-preplace inst PWM_0 -pg 1 -lvl 4 -x 1140 -y 330 -defaultsOSRD
-preplace inst PWM_1 -pg 1 -lvl 4 -x 1140 -y 470 -defaultsOSRD
+preplace inst PmodSF3_0 -pg 1 -lvl 4 -x 1150 -y 180 -defaultsOSRD
+preplace inst PmodCLS_0 -pg 1 -lvl 4 -x 1150 -y 620 -defaultsOSRD
 preplace netloc processing_system7_0_FCLK_CLK0 1 1 3 220 430 660 110 980
 preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 230 230 630
 preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 2 2 650 80 990
 preplace netloc xlconcat_0_dout 1 1 1 NJ 130
-preplace netloc PmodSF3_0_QSPI_INTERRUPT 1 0 5 20 10 NJ 10 NJ 10 NJ 10 1280
 preplace netloc PWM_0_pwm 1 4 1 NJ 330
 preplace netloc PWM_1_pwm 1 4 1 NJ 470
+preplace netloc PmodSF3_0_QSPI_INTERRUPT 1 0 5 20 10 NJ 10 NJ 10 NJ 10 1290
 preplace netloc ps7_0_axi_periph_M04_AXI 1 3 1 960 350n
 preplace netloc processing_system7_0_DDR 1 2 3 NJ 70 NJ 70 NJ
 preplace netloc processing_system7_0_FIXED_IO 1 2 3 NJ 90 NJ 90 NJ
 preplace netloc axi_gpio_0_GPIO 1 4 1 NJ 760
 preplace netloc axi_gpio_0_GPIO2 1 4 1 NJ 780
 preplace netloc processing_system7_0_M_AXI_GP0 1 2 1 640 130n
-preplace netloc ps7_0_axi_periph_M01_AXI 1 3 1 1000 290n
-preplace netloc PmodCLS_0_Pmod_out 1 4 1 NJ 620
-preplace netloc PmodSF3_0_Pmod_out 1 4 1 NJ 170
-preplace netloc ps7_0_axi_periph_M00_AXI 1 3 1 1000 150n
 preplace netloc ps7_0_axi_periph_M02_AXI 1 3 1 N 310
 preplace netloc ps7_0_axi_periph_M03_AXI 1 3 1 970 330n
-levelinfo -pg 1 0 120 430 810 1140 1300
-pagesize -pg 1 -db -bbox -sgen 0 0 1480 850
+preplace netloc PmodSF3_0_Pmod_out 1 4 1 NJ 170
+preplace netloc PmodCLS_0_Pmod_out 1 4 1 NJ 620
+preplace netloc ps7_0_axi_periph_M00_AXI 1 3 1 1010 270n
+preplace netloc ps7_0_axi_periph_M01_AXI 1 3 1 1000 150n
+levelinfo -pg 1 0 120 430 810 1150 1310
+pagesize -pg 1 -db -bbox -sgen 0 0 1490 850
 "
 }
 {
-   "da_axi4_cnt":"18",
-   "da_clkrst_cnt":"9",
+   "da_axi4_cnt":"23",
+   "da_clkrst_cnt":"14",
    "da_ps7_cnt":"1"
 }
