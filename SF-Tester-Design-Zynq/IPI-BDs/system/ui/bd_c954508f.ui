@@ -3,7 +3,7 @@
    "Default View_ScaleFactor":"0.603529",
    "Default View_TopLeft":"-255,3",
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
 preplace port DDR -pg 1 -lvl 5 -x 1310 -y 70 -defaultsOSRD
 preplace port FIXED_IO -pg 1 -lvl 5 -x 1310 -y 90 -defaultsOSRD
@@ -22,25 +22,25 @@ preplace inst ps7_0_axi_periph -pg 1 -lvl 3 -x 810 -y 310 -defaultsOSRD
 preplace inst xlconcat_0 -pg 1 -lvl 1 -x 120 -y 130 -defaultsOSRD
 preplace inst PmodSF3_0 -pg 1 -lvl 4 -x 1150 -y 180 -defaultsOSRD
 preplace inst PmodCLS_0 -pg 1 -lvl 4 -x 1150 -y 620 -defaultsOSRD
-preplace netloc processing_system7_0_FCLK_CLK0 1 1 3 220 430 660 110 980
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 230 230 630
-preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 2 2 650 80 990
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 3 220 430 640 110 970
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 230 230 610
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 2 2 630 80 980
 preplace netloc xlconcat_0_dout 1 1 1 NJ 130
 preplace netloc PWM_0_pwm 1 4 1 NJ 330
 preplace netloc PWM_1_pwm 1 4 1 NJ 470
-preplace netloc PmodSF3_0_QSPI_INTERRUPT 1 0 5 20 10 NJ 10 NJ 10 NJ 10 1290
-preplace netloc ps7_0_axi_periph_M04_AXI 1 3 1 960 350n
+preplace netloc PmodSF3_0_QSPI_INTERRUPT 1 0 5 20 10 NJ 10 NJ 10 NJ 10 1280
+preplace netloc ps7_0_axi_periph_M04_AXI 1 3 1 950 350n
 preplace netloc processing_system7_0_DDR 1 2 3 NJ 70 NJ 70 NJ
 preplace netloc processing_system7_0_FIXED_IO 1 2 3 NJ 90 NJ 90 NJ
 preplace netloc axi_gpio_0_GPIO 1 4 1 NJ 760
 preplace netloc axi_gpio_0_GPIO2 1 4 1 NJ 780
-preplace netloc processing_system7_0_M_AXI_GP0 1 2 1 640 130n
+preplace netloc processing_system7_0_M_AXI_GP0 1 2 1 620 130n
 preplace netloc ps7_0_axi_periph_M02_AXI 1 3 1 N 310
-preplace netloc ps7_0_axi_periph_M03_AXI 1 3 1 970 330n
-preplace netloc PmodSF3_0_Pmod_out 1 4 1 NJ 170
+preplace netloc ps7_0_axi_periph_M03_AXI 1 3 1 960 330n
+preplace netloc ps7_0_axi_periph_M01_AXI 1 3 1 990 150n
+preplace netloc ps7_0_axi_periph_M00_AXI 1 3 1 1000 270n
 preplace netloc PmodCLS_0_Pmod_out 1 4 1 NJ 620
-preplace netloc ps7_0_axi_periph_M00_AXI 1 3 1 1010 270n
-preplace netloc ps7_0_axi_periph_M01_AXI 1 3 1 1000 150n
+preplace netloc PmodSF3_0_Pmod_out 1 4 1 NJ 170
 levelinfo -pg 1 0 120 430 810 1150 1310
 pagesize -pg 1 -db -bbox -sgen 0 0 1490 850
 "
