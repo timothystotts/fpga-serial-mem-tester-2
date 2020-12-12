@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Thu Dec  3 16:17:10 2020
--- Host        : J1STUDY running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+-- Date        : Sat Dec 12 14:03:13 2020
+-- Host        : l4study running 64-bit Ubuntu 18.04.5 LTS
 -- Command     : write_vhdl -force -mode synth_stub
---               w:/wa/fpga-serial-mem-tester-2/SF-Tester-Design-Zynq/IPI-BDs/system/ip/system_PmodCLS_0_7/system_PmodCLS_0_7_stub.vhdl
+--               /home/timothystotts/Workareas/GitHub/timothystotts/fpga-serial-mem-tester-2/SF-Tester-Design-Zynq/IPI-BDs/system/ip/system_PmodCLS_0_7/system_PmodCLS_0_7_stub.vhdl
 -- Design      : system_PmodCLS_0_7
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1

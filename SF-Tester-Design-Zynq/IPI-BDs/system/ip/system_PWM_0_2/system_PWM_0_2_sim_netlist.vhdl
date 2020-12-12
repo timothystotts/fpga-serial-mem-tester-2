@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
--- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Thu Dec  3 16:14:28 2020
--- Host        : J1STUDY running 64-bit major release  (build 9200)
+-- Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+-- Date        : Sat Dec 12 14:03:46 2020
+-- Host        : l4study running 64-bit Ubuntu 18.04.5 LTS
 -- Command     : write_vhdl -force -mode funcsim
---               w:/wa/fpga-serial-mem-tester-2/SF-Tester-Design-Zynq/IPI-BDs/system/ip/system_PWM_0_2/system_PWM_0_2_sim_netlist.vhdl
+--               /home/timothystotts/Workareas/GitHub/timothystotts/fpga-serial-mem-tester-2/SF-Tester-Design-Zynq/IPI-BDs/system/ip/system_PWM_0_2/system_PWM_0_2_sim_netlist.vhdl
 -- Design      : system_PWM_0_2
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -11361,8 +11361,6 @@ use UNISIM.VCOMPONENTS.ALL;
 entity system_PWM_0_2 is
   port (
     pwm : out STD_LOGIC_VECTOR ( 5 downto 0 );
-    pwm_axi_aclk : in STD_LOGIC;
-    pwm_axi_aresetn : in STD_LOGIC;
     pwm_axi_awaddr : in STD_LOGIC_VECTOR ( 6 downto 0 );
     pwm_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     pwm_axi_awvalid : in STD_LOGIC;
@@ -11381,7 +11379,9 @@ entity system_PWM_0_2 is
     pwm_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
     pwm_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     pwm_axi_rvalid : out STD_LOGIC;
-    pwm_axi_rready : in STD_LOGIC
+    pwm_axi_rready : in STD_LOGIC;
+    pwm_axi_aclk : in STD_LOGIC;
+    pwm_axi_aresetn : in STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
   attribute NotValidForBitStream of system_PWM_0_2 : entity is true;
@@ -11390,7 +11390,7 @@ entity system_PWM_0_2 is
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of system_PWM_0_2 : entity is "yes";
   attribute X_CORE_INFO : string;
-  attribute X_CORE_INFO of system_PWM_0_2 : entity is "PWM_v2_0,Vivado 2020.1";
+  attribute X_CORE_INFO of system_PWM_0_2 : entity is "PWM_v2_0,Vivado 2020.2";
 end system_PWM_0_2;
 
 architecture STRUCTURE of system_PWM_0_2 is
@@ -11408,8 +11408,7 @@ architecture STRUCTURE of system_PWM_0_2 is
   attribute X_INTERFACE_INFO of pwm_axi_bready : signal is "xilinx.com:interface:aximm:1.0 PWM_AXI BREADY";
   attribute X_INTERFACE_INFO of pwm_axi_bvalid : signal is "xilinx.com:interface:aximm:1.0 PWM_AXI BVALID";
   attribute X_INTERFACE_INFO of pwm_axi_rready : signal is "xilinx.com:interface:aximm:1.0 PWM_AXI RREADY";
-  attribute X_INTERFACE_PARAMETER of pwm_axi_rready : signal is "XIL_INTERFACENAME PWM_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 5e+07, ID_WIDTH 0, ADDR_WIDTH 7, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 1, NUM_WRITE_OUTSTANDING 1, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN system_processing_system7_0" & LF &
- "_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of pwm_axi_rready : signal is "XIL_INTERFACENAME PWM_AXI, WIZ_DATA_WIDTH 32, WIZ_NUM_REG 4, SUPPORTS_NARROW_BURST 0, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 5e+07, ID_WIDTH 0, ADDR_WIDTH 7, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN system_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of pwm_axi_rvalid : signal is "xilinx.com:interface:aximm:1.0 PWM_AXI RVALID";
   attribute X_INTERFACE_INFO of pwm_axi_wready : signal is "xilinx.com:interface:aximm:1.0 PWM_AXI WREADY";
   attribute X_INTERFACE_INFO of pwm_axi_wvalid : signal is "xilinx.com:interface:aximm:1.0 PWM_AXI WVALID";

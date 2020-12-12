@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
--- Date        : Thu Dec  3 13:53:16 2020
--- Host        : l2study running 64-bit Ubuntu 18.04.5 LTS
--- Command     : write_vhdl -force -mode synth_stub -rename_top system_auto_pc_0 -prefix
---               system_auto_pc_0_ system_auto_pc_0_stub.vhdl
+-- Date        : Sat Dec 12 14:04:45 2020
+-- Host        : l4study running 64-bit Ubuntu 18.04.5 LTS
+-- Command     : write_vhdl -force -mode synth_stub
+--               /home/timothystotts/Workareas/GitHub/timothystotts/fpga-serial-mem-tester-2/SF-Tester-Design-Zynq/IPI-BDs/system/ip/system_auto_pc_0/system_auto_pc_0_stub.vhdl
 -- Design      : system_auto_pc_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1

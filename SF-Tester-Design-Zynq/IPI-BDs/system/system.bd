@@ -12,8 +12,6 @@
     "design_tree": {
       "processing_system7_0": "",
       "rst_ps7_0_50M": "",
-      "PWM_0": "",
-      "PWM_1": "",
       "axi_gpio_0": "",
       "ps7_0_axi_periph": {
         "xbar": "",
@@ -28,7 +26,9 @@
       },
       "xlconcat_0": "",
       "PmodSF3_0": "",
-      "PmodCLS_0": ""
+      "PmodCLS_0": "",
+      "PWM_0": "",
+      "PWM_1": ""
     },
     "interface_ports": {
       "DDR": {
@@ -1269,24 +1269,6 @@
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "system_rst_ps7_0_50M_0"
       },
-      "PWM_0": {
-        "vlnv": "digilentinc.com:IP:PWM:2.0",
-        "xci_name": "system_PWM_0_2",
-        "parameters": {
-          "NUM_PWM": {
-            "value": "6"
-          }
-        }
-      },
-      "PWM_1": {
-        "vlnv": "digilentinc.com:IP:PWM:2.0",
-        "xci_name": "system_PWM_1_2",
-        "parameters": {
-          "NUM_PWM": {
-            "value": "4"
-          }
-        }
-      },
       "axi_gpio_0": {
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
         "xci_name": "system_axi_gpio_0_2",
@@ -1543,16 +1525,16 @@
               }
             },
             "interface_nets": {
-              "auto_pc_to_s00_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_pc/M_AXI"
-                ]
-              },
               "s00_couplers_to_auto_pc": {
                 "interface_ports": [
                   "S_AXI",
                   "auto_pc/S_AXI"
+                ]
+              },
+              "auto_pc_to_s00_couplers": {
+                "interface_ports": [
+                  "M_AXI",
+                  "auto_pc/M_AXI"
                 ]
               }
             },
@@ -1843,16 +1825,16 @@
           }
         },
         "interface_nets": {
-          "m03_couplers_to_ps7_0_axi_periph": {
+          "xbar_to_m03_couplers": {
             "interface_ports": [
-              "M03_AXI",
-              "m03_couplers/M_AXI"
+              "xbar/M03_AXI",
+              "m03_couplers/S_AXI"
             ]
           },
-          "m04_couplers_to_ps7_0_axi_periph": {
+          "xbar_to_m02_couplers": {
             "interface_ports": [
-              "M04_AXI",
-              "m04_couplers/M_AXI"
+              "xbar/M02_AXI",
+              "m02_couplers/S_AXI"
             ]
           },
           "xbar_to_m04_couplers": {
@@ -1867,6 +1849,30 @@
               "m02_couplers/M_AXI"
             ]
           },
+          "xbar_to_m01_couplers": {
+            "interface_ports": [
+              "xbar/M01_AXI",
+              "m01_couplers/S_AXI"
+            ]
+          },
+          "s00_couplers_to_xbar": {
+            "interface_ports": [
+              "s00_couplers/M_AXI",
+              "xbar/S00_AXI"
+            ]
+          },
+          "ps7_0_axi_periph_to_s00_couplers": {
+            "interface_ports": [
+              "S00_AXI",
+              "s00_couplers/S_AXI"
+            ]
+          },
+          "m03_couplers_to_ps7_0_axi_periph": {
+            "interface_ports": [
+              "M03_AXI",
+              "m03_couplers/M_AXI"
+            ]
+          },
           "m01_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
               "M01_AXI",
@@ -1879,40 +1885,16 @@
               "m00_couplers/S_AXI"
             ]
           },
-          "xbar_to_m03_couplers": {
+          "m04_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
-              "xbar/M03_AXI",
-              "m03_couplers/S_AXI"
-            ]
-          },
-          "xbar_to_m01_couplers": {
-            "interface_ports": [
-              "xbar/M01_AXI",
-              "m01_couplers/S_AXI"
-            ]
-          },
-          "xbar_to_m02_couplers": {
-            "interface_ports": [
-              "xbar/M02_AXI",
-              "m02_couplers/S_AXI"
-            ]
-          },
-          "s00_couplers_to_xbar": {
-            "interface_ports": [
-              "s00_couplers/M_AXI",
-              "xbar/S00_AXI"
+              "M04_AXI",
+              "m04_couplers/M_AXI"
             ]
           },
           "m00_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
               "M00_AXI",
               "m00_couplers/M_AXI"
-            ]
-          },
-          "ps7_0_axi_periph_to_s00_couplers": {
-            "interface_ports": [
-              "S00_AXI",
-              "s00_couplers/S_AXI"
             ]
           }
         },
@@ -1986,6 +1968,24 @@
             "memory_map_ref": "AXI_LITE_SPI"
           }
         }
+      },
+      "PWM_0": {
+        "vlnv": "digilentinc.com:IP:PWM:2.0",
+        "xci_name": "system_PWM_0_2",
+        "parameters": {
+          "NUM_PWM": {
+            "value": "6"
+          }
+        }
+      },
+      "PWM_1": {
+        "vlnv": "digilentinc.com:IP:PWM:2.0",
+        "xci_name": "system_PWM_1_2",
+        "parameters": {
+          "NUM_PWM": {
+            "value": "4"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -1993,12 +1993,6 @@
         "interface_ports": [
           "ps7_0_axi_periph/M04_AXI",
           "axi_gpio_0/S_AXI"
-        ]
-      },
-      "processing_system7_0_DDR": {
-        "interface_ports": [
-          "DDR",
-          "processing_system7_0/DDR"
         ]
       },
       "processing_system7_0_FIXED_IO": {
@@ -2060,6 +2054,12 @@
           "jc",
           "PmodSF3_0/Pmod_out"
         ]
+      },
+      "processing_system7_0_DDR": {
+        "interface_ports": [
+          "DDR",
+          "processing_system7_0/DDR"
+        ]
       }
     },
     "nets": {
@@ -2068,8 +2068,6 @@
           "processing_system7_0/FCLK_CLK0",
           "processing_system7_0/M_AXI_GP0_ACLK",
           "rst_ps7_0_50M/slowest_sync_clk",
-          "PWM_0/pwm_axi_aclk",
-          "PWM_1/pwm_axi_aclk",
           "axi_gpio_0/s_axi_aclk",
           "ps7_0_axi_periph/ACLK",
           "ps7_0_axi_periph/S00_ACLK",
@@ -2081,7 +2079,9 @@
           "PmodCLS_0/s_axi_aclk",
           "PmodCLS_0/ext_spi_clk",
           "PmodSF3_0/s_axi_aclk",
-          "PmodSF3_0/ext_spi_clk"
+          "PmodSF3_0/ext_spi_clk",
+          "PWM_0/pwm_axi_aclk",
+          "PWM_1/pwm_axi_aclk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -2093,8 +2093,6 @@
       "rst_ps7_0_50M_peripheral_aresetn": {
         "ports": [
           "rst_ps7_0_50M/peripheral_aresetn",
-          "PWM_0/pwm_axi_aresetn",
-          "PWM_1/pwm_axi_aresetn",
           "axi_gpio_0/s_axi_aresetn",
           "ps7_0_axi_periph/ARESETN",
           "ps7_0_axi_periph/S00_ARESETN",
@@ -2104,7 +2102,9 @@
           "ps7_0_axi_periph/M03_ARESETN",
           "ps7_0_axi_periph/M04_ARESETN",
           "PmodCLS_0/s_axi_aresetn",
-          "PmodSF3_0/s_axi_aresetn"
+          "PmodSF3_0/s_axi_aresetn",
+          "PWM_0/pwm_axi_aresetn",
+          "PWM_1/pwm_axi_aresetn"
         ]
       },
       "xlconcat_0_dout": {
