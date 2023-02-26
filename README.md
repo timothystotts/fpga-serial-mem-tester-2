@@ -2,6 +2,9 @@
 
 FPGA Serial Mem Tester Version 2
 
+Note that this project is deprecated. The most recent project, with wider
+hardware support and occasional updates, is Version 3 and is located at:
+[fpga-serial-mem-tester-3](https://github.com/timothystotts/fpga-serial-mem-tester-3)
 
 ## Description
 A small AP SoC project of Zynq-7000 implementation for testing a N25Q Serial Flash.
